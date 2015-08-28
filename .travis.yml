@@ -29,5 +29,5 @@ script:
   - if [ $RUN_TESTS == "YES" ]; then
       COMMAND+=" -destination '$DESTINATION' clean test";
     fi
-  - COMMAND+=" | xcpretty -c"
+  #- COMMAND+=" | xcpretty -c"
   - eval $COMMAND
