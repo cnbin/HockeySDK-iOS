@@ -24,7 +24,7 @@ before_install:
   - brew link --force appledoc22
 
 script:
-  - set -o pipefail
+  - set -oe pipefail
   - COMMAND="xcodebuild -project '$PROJECT' -scheme '$SCHEME' -sdk '$SDK' -configuration '$CONFIGURATION'"
   - if [ $RUN_TESTS == "YES" ]; then
       COMMAND+=" -destination '$DESTINATION' clean test";
